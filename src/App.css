@@ -1,0 +1,111 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === App Container === */
+body {
+  background: linear-gradient(135deg, #7f7fd5, #86a8e7, #91eae4);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffffd9;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* === Title === */
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* === Input and Buttons === */
+input {
+  width: 70%;
+  padding: 0.8rem;
+  border: 2px solid #86a8e7;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #7f7fd5;
+  box-shadow: 0 0 8px rgba(127, 127, 213, 0.4);
+}
+
+button {
+  background-color: #7f7fd5;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  margin-left: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #6a69c7;
+  transform: scale(1.05);
+}
+
+button.save {
+  background-color: #28a745;
+}
+
+button.save:hover {
+  background-color: #218838;
+}
+
+/* === Todo List === */
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f9fc;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.list:hover {
+  background: #eef4ff;
+  transform: translateY(-2px);
+}
+
+.list h2 {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+/* === Delete Button Special === */
+.list button:last-child {
+  background-color: #ff4d4d;
+}
+
+.list button:last-child:hover {
+  background-color: #e63939;
+}
