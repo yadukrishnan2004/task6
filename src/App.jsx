@@ -2,6 +2,8 @@ import { use, useState } from "react";
 import "./App.css";
 import { addtodo, editTodo, deleteTodo } from "./Slice";
 import { useDispatch, useSelector } from "react-redux";
+import { length } from "./createselector";
+
 
 function App() {
   const [task, setTask] = useState("");
@@ -10,6 +12,7 @@ function App() {
   const [text, settext] = useState("");
   const dispatch = useDispatch();
   const list = useSelector((state) => state.todo.list);
+  const count = useSelector(length);
 
   return (
     <>
@@ -44,6 +47,7 @@ function App() {
         </div>
 
         <div>
+          <h1>{count}</h1>
           {list.map((todo) => {
             return (
               <div key={todo.id} className="list">
